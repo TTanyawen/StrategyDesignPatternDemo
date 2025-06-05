@@ -1,0 +1,8 @@
+package com.example.strategydesignpatterndemo.demo2mimic12306.dto.resp;
+
+import lombok.Data;
+
+@Data
+public class Discount95resp extends DiscountResp{
+
+}

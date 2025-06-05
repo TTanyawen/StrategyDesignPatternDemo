@@ -19,14 +19,19 @@ package com.example.strategydesignpatterndemo.demo2mimic12306.config;
 
 
 import com.example.strategydesignpatterndemo.demo2mimic12306.strategy.AbstractStrategyChoose;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 /**
  * 设计模式自动装配
  * 公众号：马丁玩编程，回复：加群，添加马哥微信（备注：12306）获取项目资料
  */
 @ImportAutoConfiguration(ApplicationBaseAutoConfiguration.class)
+@Slf4j
+@Configuration//自己加的，不然没法变成Bean
 public class DesignPatternAutoConfiguration {
 
     /**
@@ -34,6 +39,7 @@ public class DesignPatternAutoConfiguration {
      */
     @Bean
     public AbstractStrategyChoose abstractStrategyChoose() {
+        log.info("abstractStrategyChoose init...");
         return new AbstractStrategyChoose();
     }
 
